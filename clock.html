@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function startClock() {
+        const today = new Date();
+        const h = today.getHours();
+        const m = today.getMinutes().toString().padStart(2, '0');
+        const s = today.getSeconds().toString().padStart(2, '0');
+        document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
+        setTimeout(startClock, 1000);
+      }
+
+      window.addEventListener("load", startClock);
+    </script>
+    <title>Online - Clock</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="clock" id="clock" data-testid="clock"></p>
+      <p class="text">Clock using Date.now()</p>
+    </div>
+  </body>
+</html>

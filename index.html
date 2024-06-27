@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function startTimer() {
+        const endTime = Date.now() + 5 * 60 * 1000; // 5 minutes from now
+
+        const timer = setInterval(() => {
+          const remainingTime = endTime - Date.now();
+
+          if (remainingTime <= 0) {
+            clearInterval(timer);
+            document.getElementById("timer").innerHTML = 'Offer expired!';
+            document.getElementById("message").remove();
+          } else {
+            const minutes = Math.floor(remainingTime / 1000 / 60);
+            const seconds = Math.floor((remainingTime / 1000) % 60).toString().padStart(2, '0');
+            document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+          }
+        }, 1000);
+      }
+
+      window.addEventListener("load", startTimer);
+    </script>
+    <title>Online - Clock</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="/clock" class="button">Clock demo</a>
+      <a href="/timer" class="button">Timer demo</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #0f3854;
+  background-size: 100%;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  font-family: "Share Tech Mono", monospace;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #daf6ff;
+}
+.clock {
+  letter-spacing: 0.05em;
+  font-size: 80px;
+  padding: 5px 0;
+}
+.text {
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 20px 0 0;
+}
+.button{
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+}
+.button:hover {
+    background: #ffffff;
+    color: #0f3854;
+  }
