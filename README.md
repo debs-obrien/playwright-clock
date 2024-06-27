@@ -1,9 +1,10 @@
 # playwright-clock
 demo showing clock API in Playwright
 
-Clock demo and timer demo
+Clock demo and timer demo using `date.now()`
 
-to run the app
+
+To run the app
 
 ```bash
 npm run dev
